@@ -9,8 +9,8 @@ import java.security.SecureRandom;
 @RestController
 public class PrimeGeneratorController {
     @GetMapping("/new-prime")
-    public BigInteger primeGenerator(){
-        return BigInteger.probablePrime(10000, new SecureRandom());
+    public String primeGenerator(){
+        return String.valueOf(BigInteger.probablePrime(10000, new SecureRandom()));
     }
 
     @GetMapping("/pong")
