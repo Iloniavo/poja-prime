@@ -10,11 +10,6 @@ import java.security.SecureRandom;
 public class PrimeGeneratorController {
     @GetMapping("/new-prime")
     public String primeGenerator(){
-        return String.valueOf(BigInteger.probablePrime(10000, new SecureRandom()));
-    }
-
-    @GetMapping("/pong")
-    public String pong(){
-        return "pong";
+        return String.valueOf(BigInteger.probablePrime(500, new SecureRandom()));
     }
 }
